@@ -1,0 +1,76 @@
+
+<body class="justify-center flex-col">
+  <div class="justify-center flex">
+<form [formGroup]="miForm" class="mx-auto mb-0 mt-4 max-w-md space-y-4 bg-slate-200 p-32 rounded-lg">
+   
+<section class="text-center w-full">
+    <div class="mx-auto max-w-3xl">
+      <div class=" mx-auto max-w-lg text-center">
+        
+  
+        
+      </div>
+  
+      
+        <div class="mb-8">
+          <label for="ciudad" class="sr-only">ciudad</label>
+  
+          <div class="relative">
+            <input
+            formControlName="Ciudad"
+              type="ciudad"
+              class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+              placeholder="Introduzca una ciudad"
+            />
+  
+            
+          </div>
+        </div>
+  
+        <div class="mb-8">
+          <label for="pais" class="sr-only">pais</label>
+  
+          <div class="relative">
+            <input
+            formControlName="Pais"
+              type="pais"
+              class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+              placeholder="Introduzca el pais"
+            />
+
+          </div>
+        </div>
+
+        <div class="mb-8">
+            <label for="mes" class="sr-only">mes</label>
+    
+            <div class="relative">
+              <input
+              formControlName="Fecha"
+                type="date" 
+                class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                placeholder="Mes favorito"
+              />
+              
+            </div>
+          </div>
+    
+          
+
+          <button 
+            (click)="sendForm($event)" 
+            [disabled]="!miForm.valid"
+            class="disabled:bg-neutral-600 flex-col m-4  rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white "
+          >
+            Añadir
+          </button>
+
+          
+
+     
+    </div>
+  
+  </section>
+</form>
+</div>
+</body>

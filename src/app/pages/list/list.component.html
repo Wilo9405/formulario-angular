@@ -1,0 +1,19 @@
+<div>
+
+    <app-form-ciudades (city)="addCity($event)"> </app-form-ciudades> 
+    
+    <ul>
+        <ng-template ngFor let-city [ngForOf]="ciudades">
+            <app-item-ciudades [cityInput]="city"/>
+        </ng-template>
+      </ul>
+
+      
+      
+      
+
+</div>
+
+
+
+
