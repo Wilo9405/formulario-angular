@@ -26,7 +26,7 @@ export class FormCiudadesComponent {
 
   sendForm(event: Event){
     event.preventDefault();
-    console.log("funciona!!", this.miForm.value)
+    this.miForm.value
  
     
     //validaciones
