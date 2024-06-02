@@ -1,19 +1,9 @@
 <div>
-
-    <app-form-ciudades (city)="addCity($event)"> </app-form-ciudades> 
-    
+    <app-form-ciudades (city)="addCity($event)"></app-form-ciudades>
     <ul>
-        <ng-template ngFor let-city [ngForOf]="ciudades">
-            <app-item-ciudades [cityInput]="city"/>
-        </ng-template>
-      </ul>
-
-      
-      
-      
-
-</div>
-
-
-
-
+      <ng-template ngFor let-city [ngForOf]="ciudades">
+        <app-item-ciudades [cityInput]="city" (remove)="eliminar($event)"></app-item-ciudades>
+      </ng-template>
+    </ul>
+  </div>
+  

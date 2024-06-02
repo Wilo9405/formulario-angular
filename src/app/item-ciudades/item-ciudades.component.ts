@@ -1,4 +1,5 @@
-import { Component, Input, input } from '@angular/core';
+
+import { Component, EventEmitter, Input, Output, input } from '@angular/core';
 
 @Component({
   selector: 'app-item-ciudades',
@@ -10,4 +11,11 @@ import { Component, Input, input } from '@angular/core';
 export class ItemCiudadesComponent {
   @Input() cityInput: any
 
+  @Output() remove:EventEmitter<any> = new EventEmitter();
+
+
+eliminar() {
+  this.remove.emit(this.cityInput);
+}
+  
 }

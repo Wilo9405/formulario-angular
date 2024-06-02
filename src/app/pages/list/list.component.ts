@@ -19,7 +19,12 @@ export class ListComponent {
     this.ciudades.push(city)
   }
 
-
+  eliminar(city: any) {
+    const index = this.ciudades.indexOf(city);
+    if (index > -1) {
+      this.ciudades.splice(index, 1);
+    }
+  }
 
 
 }

@@ -10,6 +10,10 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
   styleUrl: './form-ciudades.component.scss'
 })
 export class FormCiudadesComponent {
+
+  constructor(private fb: FormBuilder) {
+   
+  } 
   miForm = this.fb.group({
    Ciudad: ["",[Validators.required]],
    Pais: ["",[Validators.required]],
@@ -19,9 +23,7 @@ export class FormCiudadesComponent {
 
   @Output() city = new EventEmitter<any>();
 
-  constructor(private fb: FormBuilder) {
-   
-  } 
+
   sendForm(event: Event){
     event.preventDefault();
     console.log("funciona!!", this.miForm.value)
@@ -30,7 +32,7 @@ export class FormCiudadesComponent {
     //validaciones
     this.city.emit(this.miForm.value)
 
+     }
     
-  }
 
 }
